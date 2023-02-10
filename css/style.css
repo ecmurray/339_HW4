@@ -117,7 +117,7 @@ footer{
 }
 
 /* Step 3: Write selector/rule property to style all elements when in focus*/
-body:focus {
+:focus {
   border: 2px solid black; 
 }
 
@@ -155,16 +155,16 @@ first div in the grid  and place it in the grid. */
 }
 /* begin at 3, traverse respectively - each spans 1 */
 .about, .about-image {
-  grid-row: 3 / 4; 
+  grid-row: 2 / 3; 
 }
 .method, .method-image {
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
 }
 .clients, .clients-image {
-  grid-row: 5 / 6;
+  grid-row: 4 / 5;
 }
 .contact, .contact-image {
-  grid-row: 6 / 7;
+  grid-row: 5 / 6;
 }
 
 /* Step 8: Write the selector/rule property to style the .text-block class. */
