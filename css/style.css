@@ -101,7 +101,7 @@ footer{
 
  /* Step 1: Write selector/rule property to add an underline when
   links in the navigation are in the hover or focus state.*/
-  nav a:hover, li a:focus {
+  nav a:hover, nav a:focus {
     text-decoration: underline;
   }
   
@@ -109,7 +109,7 @@ footer{
   the top of its parent element (it is hidden by default).
   */
   .skip a{
-    /* ERROR Tab index? */
+
     position: absolute; 
     top: -40px;
   }
@@ -118,7 +118,7 @@ footer{
   below the top of its parent (so it is visible only when in focus.)
   */
   .skip a:focus {
-     /* ERROR Tab index  */
+
     position: absolute;
     top: 20px;
   }
@@ -130,7 +130,7 @@ footer{
   }
   
   /* The following specifications are for the mobile view: */
-  
+
   /* Step 4: .container class uses grid:
   Three columns: 1fr 5fr 1fr
   Gap of 15px between rows;
@@ -139,7 +139,7 @@ footer{
     display: grid; /* container class uses grid */
     grid-template-columns: 1fr 5fr 1fr; 
   
-    grid-gap: 15px; /* gap 15px between rows */
+    row-gap: 15px; /* gap 15px between rows */
   }
   /* HELP - You can NOT assume that the .overview class will always be the first child */
   /* Step 5: Write selector/rule property to add the background image to the 
@@ -169,7 +169,6 @@ footer{
   Have a maximum height of 600px
   Hide any content that goes outside their grid cell. 
   Begin on the 2nd, 3rd, 4th and 5th row respectively.
-  
   */
   .about, .method, .clients, .contact {
     grid-column: 2 / span 1; /* begins in 2nd column spans 1 row */
@@ -181,7 +180,7 @@ footer{
     /* HELP - hide content outside of cells*/
     overflow: hidden;
   }
-  /* begin at 3, traverse respectively - each spans 1 */
+  
   .about, .about-image {
     grid-row: 2 / 3; 
   }
@@ -224,7 +223,7 @@ footer{
   Five columns: 50px, auto, 500px, auto, and  50px
    */
     .container {
-      display: grid; /* container class uses grid */
+
       grid-template-columns: 50px auto 500px auto 50px; /* five columns from spec */
     }
   
@@ -241,17 +240,17 @@ footer{
     .about-image, .clients-image, .method, .contact {
       grid-column: 2 / span 2; /* begins in 2nd column spans 2 columns */
     }
+
     /* Step 13: The .text-block class:
   Has  maximum height of  250px
   Ensures that  any content that goes outside their grid cell is still reachable.
   */
-  
-      /* ERROR -2 points for not using overflow: auto or overflow: 
-    scroll to ensure that “any content that goes outside their grid cell is still reachable.” */
+      /* ERROR -2 points for not using overflow: auto or overflow:  */
     .text-block {
       max-height: 250px;
       overflow: auto;
     }
+
   }  /*End the media query*/
 
   
